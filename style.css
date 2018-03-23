@@ -6,6 +6,7 @@
 	height: 300px;
 	overflow: hidden;
 	padding: 0px;
+	position: relative;
 }
 ul {
 	display: flex;
@@ -26,4 +27,45 @@ li img {
 	width: 400px;
 	height: 300px;
 	object-fit: cover;
+}
+
+#prev, 
+#next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #fff;
+	text-shadow: 1px 1px #333;	
+	text-decoration: none;
+	font-size: 40px;
+}
+
+#prev {
+	left: 15px;
+}
+
+#next {
+	right: 15px;
+}
+
+#pagination {
+	position: absolute;
+	bottom: 25px;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 0;
+	padding: 0;
+}
+
+#pagination li {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	margin: 0 4px;
+	display: inline-block;
+}
+
+#pagination li.active {
+	background: #fff;
 }
